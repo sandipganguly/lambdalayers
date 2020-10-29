@@ -1,0 +1,4 @@
+aci-prefix-pypardot:This Layer includes yamllint, Pypardot4:yamllint==1.24.2,PyPardot4==1.1.14
+
+aci-prefix-sharedlibrary:This layer includes requests:requests==2.24.0
+

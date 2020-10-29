@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      #ruby: 2.6
+      docker: 18
+    commands:
+      - echo "Installing and upgrading pip"
+      - pip install --upgrade pip
+
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - chmod +x ./layer.sh
+      - ./layer.sh
+      - echo Deployment completed.
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+#artifacts:
+#  files:
+#    - '**/*'
